@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystal Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class ="container">
+
+		<div class = "row">
+	    	<div class="col-md-12">
+				<div class="jumbotron">
+  					<h1>Crystals Game</h1>
+  					<button onclick="startGame()">Click Here to Start</button> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+  		<div class="panel-heading">INSTRUCTIONS</div>
+  			<div class="panel-body">
+  				<ul>
+    				<li>You will be given a random number at the start of the game.</li>
+    				<li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+    				<li>You win the game by matching your total score to the random number. You lose the game if your total score goes aboce the random number.</li>
+    				<li>The value of each crystal is hidden from you until you click on it. </li>
+    				<li>Each time the game is restarted, the game will change the values of each crystal.</li>
+    			</ul>
+  			</div>
+	</div>
+
+<div class = "row">
+  <div class= "col-md-6">
+	 <div class="panel panel-default">
+    <div class="panel-heading">
+    	<h3 class="panel-title">Random Number</h3>
+  	</div>
+   <div class="panel-body">
+    		Random Number Goes Here <span id = "randomNum"></span>
+  	</div>
+	</div>
+</div>
+
+  <div class = "row">
+    <div class= "col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Running Total</h3>
+        </div>
+        <div class="panel-body">
+          Running Total Goes Here <span id = "runningTot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="btn-group">
+		<div class = "row">
+			<div class = "col-md-3">
+  				<button type="jewelOne" id="jewelOne"><img src="assets/images/March.jpg"></button>
+  			</div>
+  			<div class = "col-md-3">
+  				<button type="jewelTwo" id="jewelTwo"><img src="assets/images/May.jpg"></button>
+  			</div>
+  			<div class = "col-md-3">
+  				<button type="jewelThree" id="jewelThree"><img src="assets/images/July.jpg"></button>
+  			</div>
+  			<div class = "col-md-3">
+  				<button type="jewelFour" id="jewelFour"><img src="assets/images/Oct.jpg"></button>
+  			</div>
+		</div>
+	</div>
+
+
+<!--Make this in 1 row  wins and losses -->
+	<div class="panel panel-default">
+  	<div class="panel-heading">
+    	<h3 class="panel-title">Score</h3> 
+  	</div>
+    <div class="panel-body">
+    	Wins: <span id = "wins"></span>
+  	</div>
+    <div class="panel-body">
+        Losses: <span id = "losses"></span>
+    </div>
+	</div>
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

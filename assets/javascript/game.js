@@ -25,15 +25,67 @@ function startGame () {
 	console.log(jewelThree);
 	jewelFour = Math.floor(Math.random() * (10-7));
 	console.log(jewelFour);
-}
+	
+	//Number to display in Random Number Field
+	document.getElementById("randomNum").innerHTML = randomNum;
+//$("#randomNum").text(randomNum);
+//possibily use "this" function to call the number from jewelONE TWO..
 
-function buttonClick1(){
+};
+startGame();
+
+  /*nfunction buttonClick1(){
 	runningTot = runningTot + jewelOne;
-	var total = document.createElement("runningTot");
-	total.innerHTML = "runningTot";
-}
+	//var total = document.createElement("runningTot");
+	document.getElementById("runningTot").innerHTML = jewelOne;
+	console.log("runningTot");
+} 
+*/
 
-function buttonClick2(){
+$("#jewelOne").click(function(){
+	runningTot = runningTot + jewelOne;
+	$("#runningTot").text(" " + runningTot);
+	compare();
+});
+
+$("#jewelTwo").click(function(){
+	runningTot = runningTot + jewelTwo;
+	$("#runningTot").text(" " + runningTot);
+	compare();
+});
+
+$("#jewelThree").click(function(){
+	runningTot = runningTot + jewelThree;
+	$("#runningTot").text(" " + runningTot);
+	compare();
+});
+
+$("#jewelFour").click(function(){
+	runningTot = runningTot + jewelFour;
+	$("#runningTot").text(" " + runningTot);
+	compare();
+});
+
+var compare = function(){
+    			if(runningTot > randomNum){
+    				alert("LOSER");
+    				losses = losses + 1
+    				$("#losses").text(losses);
+    				startGame();
+    				
+    			}
+    			if (runningTot === randomNum){
+    				alert("WINNER!");
+    				wins = wins + 1
+    				$("#wins").text(wins);
+    				startGame();
+    			}	
+    		};
+
+
+		
+
+/*   function buttonClick2(){
 	runningTot = runningTot + jewelTwo;
 }
 
@@ -46,7 +98,7 @@ function buttonClick1(){
 }
 
 
-
+*/
 
 //Main process..calling upon the functions to make something happen
 //==========================================================================================================
